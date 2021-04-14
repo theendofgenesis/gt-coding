@@ -171,4 +171,271 @@ nav ul {
 
 #slideout-menu {
     display: none;
+    position: fixed;
+    background: #2D3436;
+    margin-top: 72px;
+    width: 100%;
+    text-align: center;
+    z-index: 100;
+    transition: 0.4s;
+}
+
+#slideout-menu ul {
+    list-style: none;
+    padding: 0 32px;
+}
+
+#slideout-menu ul li {
+    padding: 8px;
+}
+
+#slideout-menu a {
+    font-family: 'Roboto Condensed', sans-serif;
+    font-size: 20px;
+    color: white;
+}
+
+#slideout-menu input {
+    width: 85%;
+    padding: 8px;
+    font-family: 'Roboto Condensed', sans-serif;
+    font-size: 20px;
+    text-align: center;
+}
+
+/* Sections */
+
+section {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.section-heading {
+    font-size: 32px;
+    font-family: 'Roboto Condensed', sans-serif;
+    border-left: 3px solid black;
+    border-right: 3px solid black;
+    transition: all 0.4s;
+    display: inline-block;
+    padding: 4px 32px;
+}
+
+.section-heading:hover {
+    padding: 4px 48px;
+    background: red;
+}
+
+/* Section Source */
+
+#section-source p {
+    padding: 8px;
+    text-align: center;
+}
+
+#section-source a {
+    margin: 8px;
+    text-align: center;
+}
+
+/* Cards */
+
+.card-image {
+    transition: 0.4s;
+}
+
+.card-image:hover {
+    box-shadow: 0 10px 6px -6px #777;
+}
+
+.card .card-description {
+    padding: 0 8px;
+}
+
+/* Read More Button */
+
+.btn-readmore {
+    display: inline-block;
+    padding: 8px 24px;
+    border: 3px solid black;
+    margin-bottom: 24px;
+    font-weight: bold;
+    background: white;
+    cursor: pointer;
+    transition: 0.4s;
+}
+
+.btn-readmore:hover {
+    padding: 8px 64px;
+    background: red;
+    color: white;
+    text-decoration: none;
+}
+
+/* Footer */
+
+footer {
+    display: flex;
+    padding: 8px;
+    background: black;
+    color: #EEE;
+}
+
+footer a {
+    color: white;
+}
+
+footer #left-footer {
+    flex: 1;
+    border-right: 1px solid red;
+    padding-left: 32px;
+}
+
+footer #left-footer ul {
+    padding: 0;
+    line-height: 1.5;
+    list-style: none;
+}
+
+footer #right-footer {
+    flex: 2;
+    padding: 8px;
+    text-align: center;
+}
+
+footer #social-media-footer a .fa-facebook,
+footer #social-media-footer a .fa-youtube,
+footer #social-media-footer a .fa-github {
+    color: white;
+    transition: 0.4s;
+}
+
+footer #social-media-footer ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    padding: 0;
+}
+
+footer #social-media-footer ul li {
+    font-size: 48px;
+    padding: 16px;
+    transition: 0.4s;
+}
+
+footer #social-media-footer ul li:hover a .fa-youtube {
+    color: red;
+}
+
+footer #social-media-footer ul li:hover a .fa-facebook {
+    color: #3B599B;
+}
+
+footer #social-media-footer ul li:hover a .fa-github {
+    color: #BBB;
+}
+
+/* Media Queries */
+
+@media(max-width: 900px) {
+    nav ul {
+        display: none;
+    }
+
+    #menu-icon {
+        display: flex;
+    }
+
+    #searchbox {
+        display: none;
+    }
+
+    #slideout-menu {
+        /* display: block;  */
+    }
+}
+
+@media (max-width: 719px) {
+    main {
+        width: 95%;
+    }
+
+    section {
+        flex-direction: column;
+    }
+
+    .card,
+    .card .card-image img {
+        width: 100%;
+    }
+
+    footer {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    footer #left-footer {
+        flex: 1;
+        border-right: 0;
+        padding-left: 0;
+    }
+
+    footer #right-footer {
+        background: #EEE;
+        color: black;
+    }
+
+    footer #right-footer a {
+        color: black;
+    }
+
+    footer #social-media-footer a .fa-facebook,
+    footer #social-media-footer a .fa-youtube,
+    footer #social-media-footer a .fa-github {
+        color: black;
+        transition: 0.4s;
+    }
+}
+
+/* why am I putting the max 680px after the max 719px? */
+@media(max-width: 600px) {
+    main {
+        width: 100%;
+    }
+
+    h1 {
+        font-size: 48px;
+    }
+
+    #banner h3 {
+        font-size: 20px;
+    }
+
+    .card {
+        text-align: center;
+    }
+
+    #logo-img {
+        padding: 0;
+    }
+}
+
+@media(min-width: 720px) {
+    main {
+        width: 95%;
+    }
+
+    .card {
+        width: 45%;
+    }
+
+    .card .card-image img {
+        width: 100%;
+    }
+}
+
+@media(min-width: 1200px) {
+    main {
+        width: 85%;
+    }
 }
